@@ -112,3 +112,8 @@ python manage.py createsuperuser
 
 Admin panel URL:
 http://127.0.0.1:8000/admin/
+
+<img width="1869" height="1077" alt="Screenshot 2026-04-09 145412" src="https://github.com/user-attachments/assets/fa50cfb9-80d2-471f-80e9-ed9950f9a4b7" />
+
+<img width="959" height="577" alt="Screenshot 2026-04-09 210223" src="https://github.com/user-attachments/assets/731e6910-f07b-432b-9cd1-5a5c52b1cf0a" />
+
