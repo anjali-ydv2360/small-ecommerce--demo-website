@@ -1,0 +1,33 @@
+{% load money %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mock Checkout</title>
+</head>
+<body>
+    <h1>Mock Stripe Checkout</h1>
+
+    <p><b>Order:</b> {{ order.id }}</p>
+    <p><b>Total:</b> ${{ order.total_cents|dollars }}</p>
+
+    <h3>Items</h3>
+    <ul>
+        {% for item in order.items.all %}
+            <li>{{ item.product.name }} x {{ item.quantity }}</li>
+        {% endfor %}
+    </ul>
+
+    <form method="POST" action="{% url 'mock_pay' order.id %}">
+        {% csrf_token %}
+        <button type="submit">Pay (Success)</button>
+    </form>
+
+    <br>
+
+    <form method="POST" action="{% url 'mock_cancel' order.id %}">
+        {% csrf_token %}
+        <button type="submit">Cancel</button>
+    </form>
+
+</body>
+</html>
